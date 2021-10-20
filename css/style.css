@@ -140,6 +140,38 @@ input:checked + .offer__switch--wrapper:before {
     transform: translateX(1.2em);
 }
 
+/* RANGE */
+.offer__lead--range {
+    -webkit-appearance: none;
+    margin: 2rem 0;
+    width: 100%;
+    height: .5rem;
+    background: var(--light-grayish-blue);
+    background-image: linear-gradient(#ff4500, #ff4500);
+    
+    background-size: 70% 100%;
+    border-radius: .25rem;
+    background-repeat: no-repeat;
+}
+
+.offer__lead--range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: var(--cyan);
+    cursor: ew-resize;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+}
+
+.offer__lead--range::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
 /* OFFER ACTIONS */
 .offer__actions {
     display: flex;
