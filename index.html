@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="main">
+    <header class="header">
+      <h1 class="header__heading">Simple, traffic-based pricing</h1>
+      <h2 class="header__lead">Sign-up for our 30-day trial. No credit card required.</h2> 
+    </header>
+
+    <form class="offer">
+      <div class="offer__lead">
+        <p class="offer__lead--pageview">Pageviews</p>
+        <input type="range" min="8" max="36" step="4" name="price" class="offer__lead--range">
+        <p class="offer__lead--price">$ /month</p>
+      </div>
+
+      <label class="offer__billing" for="billing">
+        <span class="offer__billing--label">Monthly Billing</span>
+        <input type="checkbox" name="billing" id="billing" value="monthly">
+        <span class="offer__switch--wrapper">
+          <span class="offer__switch"></span>
+        </span>
+        <span class="offer__billing--label">Yearly Billing</span> <span class="badge">25% <span class="display-desktop">discount</span></span>
+      </label>
+
+      <div class="offer__actions">
+        <ul class="offer__actions--list">
+          <li>Unlimited websites</li>
+          <li>100% data ownership</li>
+          <li>Email reports</li>
+        </ul>
+
+        <input type="submit" value="Start my trial" class="offer__actions--submit">
+      </div>
+
+    </form>
+  
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </main>
+</body>
+</html>
