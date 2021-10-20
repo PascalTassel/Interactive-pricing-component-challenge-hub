@@ -146,14 +146,23 @@ input:checked + .offer__switch--wrapper:before {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    margin: 0 -1rem;
+    margin: 2rem -1rem 0;
     border-top: 1px solid var(--light-grayish-blue);
 }
 
 .offer__actions--list {
+    margin-bottom: 2rem;
     text-align: center;
 }
 
-.offer__actions--list li {
-    background-image: url(../images/icon-check.svg);
+.offer__actions--list svg {
+    margin-right: 1rem;
+}
+
+.offer__actions--submit {
+    border: 0;
+    padding: 1em 2em;
+    color: var(--pale-blue);
+    background-color: var(--dark-desaturated-blue);
+    border-radius: 1.75em;
 }

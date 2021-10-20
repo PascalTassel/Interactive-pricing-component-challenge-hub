@@ -21,9 +21,9 @@
 
     <form class="offer">
       <div class="offer__lead">
-        <p class="offer__lead--pageview">Pageviews</p>
-        <input type="range" min="8" max="36" step="4" name="price" class="offer__lead--range">
-        <p class="offer__lead--price">$ /month</p>
+        <p class="offer__lead--pageview"><span id="nbPageViews"></span> Pageviews</p>
+        <input type="range" min="8" max="36" step="4" name="price" class="offer__lead--range" id="pricerange">
+        <p class="offer__lead--price"><span id="price">$</span> /month</p>
       </div>
 
       <label class="offer__billing" for="billing">
@@ -37,9 +37,18 @@
 
       <div class="offer__actions">
         <ul class="offer__actions--list">
-          <li>Unlimited websites</li>
-          <li>100% data ownership</li>
-          <li>Email reports</li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+            Unlimited websites
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+            100% data ownership
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+            Email reports
+          </li>
         </ul>
 
         <input type="submit" value="Start my trial" class="offer__actions--submit">
