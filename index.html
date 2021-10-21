@@ -23,16 +23,16 @@
       <div class="offer__lead">
         <p class="offer__lead--pageview"><span id="nbPageViews"></span> Pageviews</p>
         <input type="range" min="1" max="5" step="1" name="price" value="3" class="offer__lead--range" id="priceRange">
-        <p class="offer__lead--price"><span id="price">$</span> /month</p>
+        <p class="offer__lead--price"><span id="offerPrice" class="offer__lead--amount">$36.00</span> / month</p>
       </div>
 
-      <label class="offer__billing" for="billing">
+      <label class="offer__billing" for="billingCheckbox">
         <span class="offer__billing--label">Monthly Billing</span>
-        <input type="checkbox" name="billing" id="billing" value="monthly">
+        <input type="checkbox" name="billing" class="offer__billing--checkbox" id="billingCheckbox" value="monthly">
         <span class="offer__switch--wrapper">
           <span class="offer__switch"></span>
         </span>
-        <span class="offer__billing--label">Yearly Billing</span> <span class="badge">25% <span class="display-desktop">discount</span></span>
+        <span class="offer__billing--label">Yearly Billing</span> <span class="badge">-25% <span class="badge__discount">discount</span></span>
       </label>
 
       <div class="offer__actions">
@@ -61,5 +61,6 @@
       Coded by <a href="#">Your Name Here</a>.
     </div>
   </main>
+  <script src="js/main.js"></script>
 </body>
 </html>
