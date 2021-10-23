@@ -15,4 +15,5 @@
 .DS_Store
 .prettierignore
 
+assets/mix-manifest.json
 assets/node_modules
