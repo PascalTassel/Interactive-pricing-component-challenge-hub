@@ -35,10 +35,14 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- Webpack
+- CSS custom properties
+- CSS Flexbox
+- CSS Grid
 - SCSS
-- Flexbox
+- Webpack
 - Mobile-first workflow
+
+:information_source: the css file is not minified in order to be readable.
 
 ### Useful resources
 
