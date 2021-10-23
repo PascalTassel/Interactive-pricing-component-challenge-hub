@@ -178,10 +178,15 @@ body {
 }
 
 .header {
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 4rem 0;
   text-align: center;
   background: url(../images/pattern-circles.svg) center center no-repeat;
+}
+@media screen and (min-width: 500px) {
+  .header {
+    margin-top: 2rem;
+  }
 }
 
 .header__heading {
