@@ -1,0 +1,13 @@
+body {
+    padding: 0 1.5rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--grayish-blue);
+    background: var(--very-pale-blue) url(../images/bg-pattern.svg) no-repeat top left;
+
+    @media screen and (min-width: #{map-get($breakpoints, xxl)}) {
+        background-size: 100% auto;
+    }
+}

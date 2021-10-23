@@ -1,0 +1,38 @@
+
+
+
+
+/* FORM */
+
+
+/* RANGE */
+
+
+
+
+/* SWITCH */
+
+.attribution {
+    margin: 2rem 0 .5rem;
+    text-align: center;
+    font-size: .8rem;
+
+    @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    
+    a {
+        color: var(--grayish-blue);
+        text-decoration: underline;
+        transition: color .3s;
+
+        
+        &:focus,
+        &:hover {
+            color: var(--dark-desaturated-blue);
+        }
+    }
+}

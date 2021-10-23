@@ -4,13 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive pricing component</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <main class="main">
@@ -19,48 +18,51 @@
       <h2 class="header__lead">Sign-up for our 30-day trial. No credit card required.</h2> 
     </header>
 
-    <form class="offer">
-      <div class="offer__lead">
-        <p class="offer__lead--pageview"><span id="nbPageViews"></span> Pageviews</p>
-        <input type="range" min="1" max="5" step="1" name="price" value="3" class="offer__lead--range" id="priceRange">
-        <p class="offer__lead--price"><span id="offerPrice" class="offer__lead--amount">$36.00</span> / month</p>
+    <form class="pricing" method="get" action="">
+      <div class="pricing__lead">
+        <p class="pricing__lead--pageview"><span id="nbPageViews"></span> Pageviews</p>
+        <input type="range" min="1" max="5" step="1" value="3" class="pricing__range" id="priceRange">
+        <p class="pricing__lead--price"><span id="offerPrice" class="pricing__lead--price-amount">$36.00</span> / month</p>
       </div>
 
-      <label class="offer__billing" for="billingCheckbox">
-        <span class="offer__billing--label">Monthly Billing</span>
-        <input type="checkbox" name="billing" class="offer__billing--checkbox" id="billingCheckbox" value="monthly">
-        <span class="offer__switch--wrapper">
-          <span class="offer__switch"></span>
-        </span>
-        <span class="offer__billing--label">Yearly Billing</span> <span class="badge">-25% <span class="badge__discount">discount</span></span>
+      <label class="pricing__switch" for="billingCheckbox">
+        <span class="pricing__switch--label">Monthly Billing</span>
+        <input type="checkbox" name="yearly" class="pricing__switch--checkbox" id="billingCheckbox" value="1">
+        <span class="pricing__switch--handler"></span>
+        <span class="pricing__switch--label">Yearly Billing <span class="badge">-25% <span class="badge__discount">discount</span></span></span>
       </label>
 
-      <div class="offer__actions">
-        <ul class="offer__actions--list">
+      <div class="pricing__footer">
+        <ul class="pricing__features">
           <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+              <path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/>
+            </svg>
             Unlimited websites
           </li>
           <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+              <path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/>
+            </svg>
             100% data ownership
           </li>
           <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+              <path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/>
+            </svg>
             Email reports
           </li>
         </ul>
-
-        <input type="submit" value="Start my trial" class="offer__actions--submit">
+        <input type="hidden" name="offername" id="offerInput" value="">
+        <input type="submit" value="Start my trial" class="pricing__submit">
       </div>
-
     </form>
   
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/PascalTassel">Pascal Tassel</a>.
     </div>
   </main>
-  <script src="js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

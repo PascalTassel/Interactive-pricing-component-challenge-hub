@@ -1,0 +1,48 @@
+.pricing__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem -1.5rem 0;
+    border-top: 1px solid var(--light-grayish-blue);
+
+    @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+        flex-direction: row;
+        margin-right: -3rem;
+        margin-left: -3rem;
+        padding: 0 3rem;
+    }
+}
+
+.pricing__features {
+    margin: 2rem 0;
+    text-align: center;
+
+    @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+        text-align: left;
+        line-height: 2;
+    }
+
+    svg {
+        margin-right: .8rem;
+    }
+}
+
+.pricing__submit {
+    border: 0;
+    padding: 1em 4em;
+    color: var(--pale-blue);
+    background-color: var(--dark-desaturated-blue);
+    border-radius: 1.75em;
+    cursor: pointer;
+    transition: .3s;
+    
+    
+    &:focus,
+    &:hover {
+        color: #fff;
+    }
+
+    @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+        margin-left: auto;
+    }
+}

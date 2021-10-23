@@ -1,0 +1,15 @@
+.badge {
+    padding: 0 .5em;
+    font-size: .75rem;
+    color: var(--light-red);
+    background-color: var(--light-grayish-red);
+    border-radius: 1em;
+}
+
+.badge__discount {
+    display: none;
+
+    @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+        display: inline-block;
+    }
+}

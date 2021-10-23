@@ -1,0 +1,19 @@
+// Reset CSS
+@import 'reset';
+
+// SCSS vars
+@import 'vars';
+
+// Component
+@import 'badge';
+
+// Pricing
+@import 'root';
+@import 'fonts';
+@import 'body';
+@import 'header';
+@import 'pricing';
+@import 'pricing-range';
+@import 'pricing-switch';
+@import 'pricing-footer';
+@import 'attribution';

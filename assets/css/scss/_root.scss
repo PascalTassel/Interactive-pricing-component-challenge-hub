@@ -1,0 +1,15 @@
+:root {
+    /* Primary */
+    --soft-cyan: #{map-get($colors, soft-cyan)};
+    --cyan: #{map-get($colors, cyan)};
+    --light-grayish-red: #{map-get($colors, light-grayish-red)};
+    --light-red: #{map-get($colors, light-red)};
+    --pale-blue: #{map-get($colors, pale-blue)};
+    /* Neutral */
+    --white: #{map-get($colors, white)};
+    --very-pale-blue: #{map-get($colors, very-pale-blue)};
+    --light-grayish-blue: #{map-get($colors, light-grayish-blue)};
+    --dark-grayish-blue: #{map-get($colors, dark-grayish-blue)};
+    --grayish-blue: #{map-get($colors, grayish-blue)};
+    --dark-desaturated-blue: #{map-get($colors, dark-desaturated-blue)};
+  }

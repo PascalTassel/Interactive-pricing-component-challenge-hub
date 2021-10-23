@@ -1,0 +1,57 @@
+.pricing {
+    max-width: 35rem;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 2rem 1.5rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px 10px rgb(0 0 0 / 1%);
+
+    @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+        padding: 3rem 3rem 0;
+    }
+}
+
+.pricing__lead {
+    background-color: var(--white);
+    text-align: center;
+
+    @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+.pricing__lead--pageview {
+    text-transform: uppercase;
+
+    @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+        width: 50%;
+    }
+}
+
+.pricing__lead--price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    white-space: nowrap;
+
+    @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+        width: 50%;
+        justify-content: flex-end;
+        margin: 0;
+    }
+}
+
+.pricing__lead--price-amount {
+    margin-right: .5rem;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--dark-desaturated-blue);
+
+    @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+        font-size: 2.5rem;
+    }
+}

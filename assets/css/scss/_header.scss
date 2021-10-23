@@ -1,0 +1,25 @@
+.header {
+    margin-top: 2rem;
+    padding: 4rem 0;
+    text-align: center;
+    background: url(../images/pattern-circles.svg) center center no-repeat;
+}
+
+.header__heading {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: .5rem;
+    color: var(--dark-desaturated-blue);
+
+    @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+        font-size: 1.9rem;
+    }
+}
+.header__lead {
+    width: 14rem;
+    margin: 0 auto;
+
+    @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+        width: auto;
+    }
+}
