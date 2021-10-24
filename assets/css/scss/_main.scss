@@ -1,0 +1,8 @@
+.main {
+    flex: 1;
+    padding: 1rem 1.5rem;
+
+    @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+        padding-top: 2rem;
+    }
+}
