@@ -9,28 +9,28 @@ const pricingComponent = {
     currentOffer: '10K',
     discount: false,
     discountPercent: 25,
-    init: function () {
+    init: () => {
         // Get DOM elements
-        this.rangeElement = document.getElementById('priceRange');
-        this.checkboxElement = document.getElementById('billingCheckbox');
-        this.nbPageViewsElement = document.getElementById('nbPageViews');
-        this.offerPriceElement = document.getElementById('offerPrice');
-        this.offerInput = document.getElementById('offerInput');
+        pricingComponent.rangeElement = document.getElementById('priceRange');
+        pricingComponent.checkboxElement = document.getElementById('billingCheckbox');
+        pricingComponent.nbPageViewsElement = document.getElementById('nbPageViews');
+        pricingComponent.offerPriceElement = document.getElementById('offerPrice');
+        pricingComponent.offerInput = document.getElementById('offerInput');
 
         // Listen range
-        this.rangeElement.addEventListener('input', pricingComponent.onRangeChange);
+        pricingComponent.rangeElement.addEventListener('input', pricingComponent.onRangeChange);
 
         // Listen checkbox
-        this.checkboxElement.addEventListener('change', pricingComponent.onCheckboxChange);
+        pricingComponent.checkboxElement.addEventListener('change', pricingComponent.onCheckboxChange);
 
         // Launch events
-        this.rangeElement.dispatchEvent(new Event('input'));
-        this.checkboxElement.dispatchEvent(new Event('change'));
-        
+        pricingComponent.rangeElement.dispatchEvent(new Event('input'));
+        pricingComponent.checkboxElement.dispatchEvent(new Event('change'));
     },
-    onRangeChange: function () {
+    onRangeChange: (e) => {
+        console.log(e, this );
         // Get range position
-        const position = Number(this.value);
+        const position = Number(e.target.value);
         // Get offer name
         const index = position - 1;
         pricingComponent.currentOffer = Object.keys(pricingComponent.offers)[index];
@@ -39,7 +39,7 @@ const pricingComponent = {
         // Store range background sizes
         const backgroundPositions = [0, 25, 50, 75, 100];
         // Set range background size
-        this.style.backgroundSize = `${backgroundPositions[index]}% 100%`;
+        e.target.style.backgroundSize = `${backgroundPositions[index]}% 100%`;
         // Display offer name
         pricingComponent.nbPageViewsElement.innerText = pricingComponent.currentOffer;
 
@@ -49,22 +49,25 @@ const pricingComponent = {
         // Set offer input value
         pricingComponent.offerInput.value = pricingComponent.currentOffer;
     },
-    onCheckboxChange: function () {
+    onCheckboxChange: (e) => {
         // Toggle discount
-        pricingComponent.discount = this.checked;
+        pricingComponent.discount = e.target.checked;
 
         // Update offer price
         pricingComponent.displayOfferPrice();
     },
-    displayOfferPrice: function () {
+    displayOfferPrice: () => {
         // Get current price
-        const price = this.offers[this.currentOffer];
+        const price = pricingComponent.offers[pricingComponent.currentOffer];
         // Has discount ?
-        const discountAmount = this.discount ? ((this.discountPercent * price) / 100) : 0;
+        const discountAmount = pricingComponent.discount ? ((pricingComponent.discountPercent * price) / 100) : 0;
         // Display price
-        this.offerPriceElement.innerText = `$${price - discountAmount}.00`;
+        pricingComponent.offerPriceElement.innerText = `$${price - discountAmount}.00`;
     }
 };
 
-// Launch component
-pricingComponent.init();
+// On dom loaded
+window.addEventListener("DOMContentLoaded", () => {
+    //Launch component
+    pricingComponent.init();
+});
