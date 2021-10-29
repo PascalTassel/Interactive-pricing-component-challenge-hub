@@ -1,4 +1,4 @@
-var pricingComponent = {
+const pricingComponent = {
     offers: {
         '10K': 8,
         '50K': 12,
@@ -30,14 +30,14 @@ var pricingComponent = {
     },
     onRangeChange: function () {
         // Get range position
-        var position = Number(this.value);
+        const position = Number(this.value);
         // Get offer name
-        var index = position - 1;
+        const index = position - 1;
         pricingComponent.currentOffer = Object.keys(pricingComponent.offers)[index];
         // Get offer price
-        var pricing = pricingComponent.offers[pricingComponent.currentOffer];
+        const pricing = pricingComponent.offers[pricingComponent.currentOffer];
         // Store range background sizes
-        var backgroundPositions = [0, 25, 50, 75, 100];
+        const backgroundPositions = [0, 25, 50, 75, 100];
         // Set range background size
         this.style.backgroundSize = `${backgroundPositions[index]}% 100%`;
         // Display offer name
@@ -58,9 +58,9 @@ var pricingComponent = {
     },
     displayOfferPrice: function () {
         // Get current price
-        var price = this.offers[this.currentOffer];
+        const price = this.offers[this.currentOffer];
         // Has discount ?
-        var discountAmount = this.discount ? ((this.discountPercent * price) / 100) : 0;
+        const discountAmount = this.discount ? ((this.discountPercent * price) / 100) : 0;
         // Display price
         this.offerPriceElement.innerText = `$${price - discountAmount}.00`;
     }
